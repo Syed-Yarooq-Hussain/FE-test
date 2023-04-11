@@ -16,21 +16,19 @@ export class PokemonListComponent {
 
   async ngOnInit()  {
     await this.callPokemonApi();
-    console.log("------------------------>>>>>>>>",this.pokemonData)
 
   }
 
   async callPokemonApi() {
     this.api.getPokemonData().subscribe((data: any)=>{
       this.pokemonData = data.results.slice(0, 151);
-      console.log("------------------------>>>>>>>>",this.pokemonData)
     });
   }
 
   searchPokemon() {
+    (this.search == '') ? this.callPokemonApi() : 
     this.pokemonData = this.pokemonData.filter(element => element.name.includes(this.search));
-    console.log("******************************", this.pokemonData)
-
+    
     return
   }
 }
