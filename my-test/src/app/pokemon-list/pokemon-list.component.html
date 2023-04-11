@@ -1,1 +1,25 @@
-<p>pokemon-list works!</p>
+<div>
+    <div class="search-area">
+        <h1>Search Pokemon by Name</h1>
+            <input name="search" type="text" placeholder="write to search" [(ngModel)]="search"/>
+            <button (click)="searchPokemon()">search</button>
+
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <th>s.no</th>
+                <th>name</th>
+                <th>url</th>
+            </tr>
+            <tr *ngFor="let pokemon of pokemonData; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{pokemon.name}}</td>
+                <td><a href="{{pokemon.url}}">{{pokemon.url}}</a></td>
+            </tr>
+    
+        </table>
+    <div>
+</div>
+
