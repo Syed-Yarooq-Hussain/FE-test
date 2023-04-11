@@ -1,0 +1,3 @@
+Create a “pokedex” using the API “https://pokeapi.co/” using react and material ui (is important to read the documentation).
+
+The pokedex must show all the pokemon from 1 to 151 in the api index result and using it you can search all pokemon from 1 to 151.ng 
